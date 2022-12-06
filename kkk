@@ -1,0 +1,64 @@
+# Zadanie 1. Konwersja 8-bitowej liczby binarnej na liczbę dziesiętną.
+# • Utwórz 8-elementową listę składaną o wartościach będących kolejnymi potęgami dwójki - [128 64 32
+# 16 8 4 2 1]
+# • Na podstawie tej listy utwórz tablice ndarray o nazwie wagi.
+# • Utwórz drugą 8-elementową tablicę ndarray wypełnioną zerami i jedynkami (losowo) o nazwie
+# liczba_bin.
+# • Oblicz iloczyn tablic wagi i liczba_bin, a następnie policz sumę wartości iloczynu.
+
+# import numpy as np
+#
+# lista = [2**i for i in range(7, -1, -1)]
+# print(lista)
+#
+# wagi = np.array(lista)
+# print(wagi)
+#
+# liczba_bin = np.random.randint(low = 0, high = 2, size = 8)
+# print(liczba_bin)
+#
+# tab = wagi*liczba_bin
+# print(tab.sum())
+
+
+# Zadanie 2.
+# • Utwórz losową macierz o wymiarach 5x5. Znajdź największy i najmniejszy element. (patrz tab4_2d;
+# metoda max(), min())
+# • Wypisz największe elementy w każdym z wierszy (axis = 1) i w każdej z kolumn (axis = 0).
+# • Policz sumę wartości w poszczególnych wierszach.
+
+# import numpy as np
+#
+# mat = np.random.randint(low = 0, high = 44, size = (5, 5))
+# print(mat)
+#
+# mat_max = mat.max()
+# mat_min = mat.min()
+#
+# print(f"Wartość max: {mat_max}, wartość min: {mat_min}.")
+#
+# print(f"Wartości max w wierszach: {mat.max(axis = 1)}")
+#
+# print(f"Wartości min w kolumnach: {mat.min(axis = 0)}")
+#
+# print(f"Suma wartości wierszy: {mat.sum(axis = 1)}")
+
+
+
+# Zadanie 3. Utwórz tablicę wypełnioną zerami. Wypełnij zaznaczone obszary tablicy jedynkami.
+import numpy as np
+
+tab = np.zeros((3, 3))
+
+tab[1: , :2] = 1
+# tab_2 = 1
+print(tab)
+
+tab[:,2] = 1
+print(tab)
+
+tab[:2, :] = 1
+print(tab)
+
+tab[:2, 0] = 1
+print(tab)
