@@ -1,0 +1,9 @@
+import numpy
+tab1 = numpy.zeros((3, 3))
+# tab1[1:, :2] = 1
+# tab2 = 1
+# tab1[:, 2] = 1
+# tab1[:2, :] = 1
+# tab1[:2, 0] = 1
+tab1[:2, [0, 2]] = 1
+print(tab1)
